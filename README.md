@@ -1,1 +1,1 @@
-** Projeto de Engenharia de Software II
+Template Rápido de Projeto Expo com Typescript, Prettier e Eslint

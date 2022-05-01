@@ -9,7 +9,6 @@
     "allowJs": true,
     "strict": false,
     "skipLibCheck": true,
-    "noImplicitAny": false,
     "declaration": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,

@@ -1,22 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Provider as ProviderRedux } from 'react-redux'
 
-import HomeScreen from './screens/home-screen';
+import { StatusBar } from 'expo-status-bar'
 
+import { PersistGate } from 'redux-persist/integration/react'
+
+import styled from 'styled-components/native'
+
+import Navigations from './navigations'
+import { store, persistor } from './reducers'
+
+const Container = styled.View`
+  flex: 1;
+`
 export default function App() {
   return (
-    <View style={styles.container}>
-      <HomeScreen />
-      <StatusBar style="auto" />
-    </View>
-  );
+    <ProviderRedux store={store}>
+      <PersistGate persistor={persistor} loading={null}>
+        <Container>
+          <Navigations />
+          <StatusBar style="auto" />
+        </Container>
+      </PersistGate>
+    </ProviderRedux>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

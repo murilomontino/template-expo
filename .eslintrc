@@ -52,6 +52,7 @@
 			"off"
 		],
 		"no-console": "error",
+		"react/react-in-jsx-scope": "off",
 		"import-helpers/order-imports": [
 			"warn",
 			{
@@ -73,7 +74,6 @@
 						"/^@\/screens/",
 						"/^@\/components/"
 					],
-					"/^@\/forms/",
 					"/^@\/services/",
 					[
 						"parent",
